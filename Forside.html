@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Projekt3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Forside</title>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav_links">
+                <li><a href="Forside.html">Forside</a></li>
+                <li><a href="Portifolie.html">Portifolie</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div class="cta" onclick="window.location.href='#Kontakt';">
+            <button>Kontakt</button>
+        </div>
+
+    </header>
+
+         <div class="logo-container">
+             <img src="Billedemappe_til_projekt_3/Logo11.png" alt="Logo" class="logo">
+         </div>
+
+        <div class="textbook">
+              <h1>Your Textbook Title</h1>
+              <p>This is the introductory paragraph of your textbook. You can add more paragraphs as needed.</p>
+         </div>
+
+        <div class="Foto-container">
+          <img src="Billedemappe_til_projekt_3/brooke-lark-AdMHAf_cdns-unsplash.jpg" alt="Foto" class="Foto">
+          <img src="Billedemappe_til_projekt_3/izz-r-vz6pyjmAKzI-unsplash.jpg" alt="Foto" class="Foto">
+        </div>
+
+        <div class="video-section1">
+            <video src="" controls></video>
+        </div>
+ 
+
+        <div class="om_mig-container">
+        <div class="column">
+                <img src="Billedemappe_til_projekt_3/lana-mattice-EWeqRfmiRMs-unsplash.jpg" alt="Potræt" class="Potræt-image">
+        </div>
+        
+        <div class="column">
+        <div class="textbook">
+                    <h2>Om mig</h2>
+                    <p>Jeg elsker at tage billeder og redigere videoer, men mest af alt 
+                        så elsker jeg at drive en virksomhed frem til sucess. Jeg har arbejdet
+                        10 år i restaurationsbranhcen og kender derfor til vigtigheden af at 
+                        være aktive på de sociale medier. Jeg specialisere mig derfor indenfor
+                        dette område og jeg har speciale i content creation. 
+                    </p>
+        </div>
+        </div>
+      
+      </div>
+         <footer>
+         <div class="footer container"> 
+         <div class="socialicons"> 
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="footerbottom">
+        <p>Copyright & Designed by shoelleproduction</p>
+        </div>
+        </div>
+         </footer>
+
+        <div class="overlay" onclick="closeNav()"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navLinks = document.querySelector('.nav_links');
+            var burgerMenu = document.querySelector('.burger-menu');
+    
+            burgerMenu.addEventListener('click', function () {
+                navLinks.classList.toggle('show');
+            });
+    
+            // Close the menu when a link is clicked
+            var navLinksList = document.querySelectorAll('.nav_links li a');
+            navLinksList.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navLinks.classList.remove('show');
+                });
+            });
+        });
+        
+        function closeNav() {
+            document.querySelector('.nav_links').classList.remove('show');
+            document.querySelector('.overlay').classList.remove('show');
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+

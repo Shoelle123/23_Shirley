@@ -1,0 +1,446 @@
+body {
+    background-color: #FEFAE0;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+footer {
+    background-color: #BC6C25;
+    color: black;
+    padding: 10px 0; 
+    position: relative;
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+}
+
+
+.footer.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #BC6C25;
+}
+
+.socialicons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.socialicons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: transparent;
+    margin: 10px;
+    border-radius: 50%;
+    color:#283618;
+}
+
+.socialicons a:hover {
+    color: #FEFAE0;
+}
+
+.footerbottom {
+    margin-top: 10px;
+    order: 2;
+    text-align: left;
+    color: #BC6C25;
+}
+
+li, a, button {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10%;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 30px;
+    background-color: #BC6C25;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+}
+
+.nav_links li {
+    display: list-item;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color:#606C38;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: #283618;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: #fefae0
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    height: 3px;
+    width: 25px;
+    background-color: #000000;
+    margin: 10px 0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.main-content {
+    background-color: gray;
+}
+
+.Foto-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+}
+
+.video-section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    margin: 50px 40px; /* Top and bottom margin of 50px, left and right margin of 40px */
+}
+
+video {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 8px;
+    margin: 20px 0; /* Space between video and other elements */
+    outline: none;
+}
+
+.om_mig-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto 10px; /* Adjust margin as needed */
+}
+
+.textbook {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: none;
+}
+
+.textbook h1 {
+    color: #333;
+}
+
+.textbook p {
+    color: #666;
+}
+
+.about-me {
+    flex-direction: column;
+    align-items: center;
+}
+.slideshow-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+}
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous,
+.next {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.column {
+    margin: 10px; /* Adjust margin as needed */
+    text-align: center;
+}
+
+.column iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.column h2 {
+    color: #000000; /* Adjust the color as needed */
+    margin-bottom: 10px;
+}
+
+.column p {
+    color: #000000; /* Adjust the color as needed */
+}
+
+
+@media screen and (max-width: 760px) {
+    .nav_links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        width: 50%;
+        background-color: #333;
+        top: 70px;
+        left: -100%;
+        transition: left 0.3s ease;
+        height: 100vh;
+    }
+
+    .nav_links.show {
+        left: 0;
+    }
+
+    .nav_links li {
+        margin-bottom: 100px;
+    }
+
+    .burger-menu {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(199, 8, 8, 0.5);
+        z-index: 1;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta {
+        margin-top: 20px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .footer.container {
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .socialicons {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .footerbottom {
+        order: 1;
+        text-align: center;
+    }
+
+    .logo {
+        max-width: 80%;
+    }
+
+    .socialicons a i {
+        font-size: 2.5em;
+    }
+
+    .Foto-container {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally in the column */
+    }
+
+    .Foto {
+        margin: 10px 0; /* Adjust spacing between images in the mobile version */
+        max-width: 85%;
+        margin: auto; /* Center the images horizontally */
+        display: block; /* Add this line to override any default inline display */
+    }
+
+    .textbook {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .textbook h1,
+    .textbook p {
+        text-align: center;
+    }
+
+    .beskrivelse-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .column {
+        flex: 1;
+        margin: 0 10px;
+    }
+    
+    .Potræt-image {
+        max-width: 85%;
+        margin: 10px 0;
+        height: auto;
+        border-radius: 8px;
+    } 
+    .slideshow-container {
+        width: 100%;
+    }
+
+    .Video2-container,
+    .Beskrivelse-container {
+        width: 100%;
+    }
+    .om_mig-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .column {
+        width: 100%; /* Ensure each column takes up full width */
+        margin-bottom: 20px; /* Add space between the columns */
+    }
+    
+}
+@media screen and (min-width: 768px) {
+    .Foto-container {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .Foto {
+        max-width: 48%; 
+        
+    }
+    .video-section1 {
+        margin: 50px 40px; /* Adjust margin as needed */
+    }
+
+    video {
+        max-width: 100%; /* Ensure the video fills its container */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .Beskrivelse-container {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 40px;
+    }
+
+    .column {
+        flex: 1;
+        margin: 0 10px;
+        
+    }
+
+    .Potræt-image {
+        max-width: 85%;
+        height: auto;
+        border-radius: 10px;
+        
+    }
+
+    .column h2{
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .column p {
+        font-size: 40px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
